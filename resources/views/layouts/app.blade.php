@@ -48,7 +48,7 @@
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ asset('images/logo.png') }}" alt="Waterfree" class="img-fluid">
+                        <img src="{{ asset('images/firm_default.svg') }}" alt="Waterfree" class="img-fluid">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
@@ -187,9 +187,9 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <a href="{{ route('home') }}" class="footer-logo">
-                        <img src="{{ asset('images/logo.png') }}" class="ïmg-fluid">
+                        <img src="{{ asset('images/firm_default.svg') }}" class="ïmg-fluid">
                     </a>
-                    <p class="footer-copyright">©2019-2020 MyHim. All Rights Reserved.</p>
+                    <p class="footer-copyright">©2019-2020 Waterfree. All Rights Reserved.</p>
                 </div>
                 <div class="col-sm-2 text-center">
                     <div class="footer-wrap">

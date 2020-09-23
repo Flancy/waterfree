@@ -12,7 +12,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('products')->insert([
+        /*DB::table('products')->insert([
             'name' => 'Химия',
             'slug' => 'himiya',
             'description' => 'Описание',
@@ -23,6 +23,6 @@ class ProductsTableSeeder extends Seeder
             'hit' => 1,
             'city_id' => '1',
             'firm_id' => '1'
-        ]);
+        ]);*/
     }
 }
