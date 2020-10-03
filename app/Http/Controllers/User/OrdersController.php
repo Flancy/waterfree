@@ -13,6 +13,10 @@ class OrdersController extends Controller
 {
     public function index()
     {
+        if(Auth::user()->role === 2) {
+            return redirect()->route('user.firm.setting.index');
+        }
+
     	$orders = Order::where('user_id', Auth::id())->get();
 
     	$collection = collect($orders);

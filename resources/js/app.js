@@ -16,8 +16,9 @@ window.Vue = require('vue');
 require('./scripts/user_city.js');
 require('./scripts/city_dropdown.js');
 
-import Vuelidate from 'vuelidate'
-Vue.use(Vuelidate)
+import Vuelidate from 'vuelidate';
+import SimpleMDE from 'simplemde';
+Vue.use(Vuelidate);
 
 /**
  * The following block of code may be used to automatically register your
@@ -55,6 +56,8 @@ const app = new Vue({
 
 //Тестовое админка
 jQuery(document).ready(function($) {
+	let simplemde = new SimpleMDE({ element: document.getElementById("productMDE") });
+
 	$('.app .navigation .navigation-left--header').click(function () {
 		if($(this).hasClass('active')) {
 			$(this).removeClass('active');

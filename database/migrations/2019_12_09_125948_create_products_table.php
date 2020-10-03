@@ -20,8 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->string('logo');
             $table->integer('price');
-            //$table->integer('liter');
-            $table->longText('comment')->nullable();
+            $table->string('liter');
             $table->integer('hit')->nullable();
             $table->unsignedBigInteger('city_id');
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');

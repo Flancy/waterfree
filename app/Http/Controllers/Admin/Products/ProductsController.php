@@ -43,7 +43,7 @@ class ProductsController extends Controller
             'name' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|max:255',
-            //'liter' => 'required|max:255',
+            'liter' => 'required|max:255',
             'city_id' => 'required|max:255',
             'firm_id' => 'required|max:255',
             'logo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
@@ -58,10 +58,9 @@ class ProductsController extends Controller
             'slug' => Transliterate::transliterate($request->name),
             'description' => $request->description,
             'price' => $request->price,
-            //'liter' => $request->liter,
+            'liter' => $request->liter,
             'city_id' => $request->city_id,
             'firm_id' => $request->firm_id,
-            'comment' => $request->has('comment') ? $request->input('comment') : NULL,
             'hit' => $request->has('hit') ? $request->input('hit') : NULL,
             'logo' => '/images/logo_products/'.$imageName,
         ];

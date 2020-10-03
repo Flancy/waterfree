@@ -105,7 +105,12 @@
                             </li>
                             @auth
                                 <li class="nav-item">
-                                    <a href="{{ route('user.home') }}" class="nav-link nav-link_profile">
+                                    <a href="
+                                    @if(Auth::user()->role === 2)
+                                        {{ route('user.firm.orders.index') }}
+                                    @else
+                                        {{ route('user.home') }}
+                                    @endif" class="nav-link nav-link_profile">
                                         <span class="nav-link--ico">@include('layouts.svg-icons.header-top-user-profile')</span>
                                     </a>
                                 </li>
@@ -148,7 +153,12 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownSetting">
-                            <a class="dropdown-item" href="{{ route('user.orders.index') }}">
+                            <a class="dropdown-item" href="
+                            @if(Auth::user()->role === 2)
+                                {{ route('user.firm.setting.index') }}
+                            @else
+                                {{ route('user.orders.index') }}
+                            @endif">
                                 {{ __('Личный кабинет') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"

@@ -13,9 +13,9 @@ class FirmsTableSeeder extends Seeder
     public function run()
     {
         DB::table('firms')->insert([
-            'name' => 'MyHim',
-            'slug' => 'my-him',
-            'logo' => '/images/logo.png'
+            'name' => 'Waterfree',
+            'slug' => 'waterfree',
+            'logo' => '/public/images/firm_default.svg'
         ]);
 
         DB::table('city_firms')->insert([

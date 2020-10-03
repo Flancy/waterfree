@@ -34,7 +34,9 @@
         "jquery.maskedinput": "^1.4.1",
         "laravel-vue-pagination": "^2.3.1",
         "owl.carousel": "^2.3.4",
+        "simplemde": "^1.11.2",
         "vue-masked-input": "^0.5.2",
+        "vue-tinymce-editor": "^1.6.2",
         "vuelidate": "^0.7.5"
     }
 }

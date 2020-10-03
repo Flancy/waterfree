@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Firms extends Model
 {
+    use Sluggable;
     /**
      * The attributes that are mass assignable.
      *
@@ -16,7 +18,16 @@ class Firms extends Model
     protected $fillable = [
         'name', 'slug', 'logo'
     ];
-    
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
+
     public function cities()
     {
         return $this->belongsToMany(City::class);

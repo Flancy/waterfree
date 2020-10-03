@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "caouecs/laravel-lang": "~4.0",
+        "cviebrock/eloquent-sluggable": "6.0.*",
         "darryldecode/cart": "^4.0",
         "elfsundae/laravel-hashid": "^1.4",
         "fideloper/proxy": "^4.0",

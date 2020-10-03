@@ -15,8 +15,8 @@ class CheckUserCustomer
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->user()->role == 1) {
-            return $next($request);
+        if (auth()->user()->role !== 1) {
+            return redirect()->route('home');
         }
 
         return $next($request);

@@ -16,6 +16,7 @@ use ElfSundae\Laravel\Hashid\Facades\Hashid;
 
 use App\User;
 use App\Models\Token;
+use App\Models\Balance;
 
 class RegisterController extends Controller
 {
@@ -82,7 +83,7 @@ class RegisterController extends Controller
 
         $referred_by = $cookie ? Hashid::decode($cookie) : null;
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'activate' => 0,
             'role' => $data['role'],
@@ -92,6 +93,12 @@ class RegisterController extends Controller
             'city_id' => $data['city_id'],
             'referred_by' => $referred_by[0]
         ]);
+
+        Balance::create([
+            'user_id' => $user->id
+        ]);
+
+        return $user;
     }
 
     public function code()

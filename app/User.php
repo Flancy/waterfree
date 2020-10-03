@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\User', 'referred_by');
     }
+
+    public function balance()
+    {
+        return $this->hasOne('App\Models\Balance', 'user_id');
+    }
 }

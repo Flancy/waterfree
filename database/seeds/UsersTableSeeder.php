@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $user = DB::table('users')->insert([
+        DB::table('users')->insert([
             'name' => 'Admin',
             'activate' => 1,
             'role' => 0,
@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
             'city_id' => 1,
         ]);
 
-        $user = DB::table('users')->insert([
+        DB::table('users')->insert([
             'name' => 'User 1',
             'activate' => 1,
             'role' => 2,
@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder
             'city_id' => 1,
         ]);
 
-        $user = DB::table('users')->insert([
+        DB::table('users')->insert([
             'name' => 'User 2',
             'activate' => 1,
             'role' => 1,
@@ -42,6 +42,16 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('klon5031'),
             'phone' => '+7(999)-999-99-97',
             'city_id' => 1,
+        ]);
+
+        DB::table('balances')->insert([
+            'user_id' => 1
+        ]);
+        DB::table('balances')->insert([
+            'user_id' => 2
+        ]);
+        DB::table('balances')->insert([
+            'user_id' => 3
         ]);
     }
 }
